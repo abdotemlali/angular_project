@@ -1,0 +1,52 @@
+.navbar {
+  background: linear-gradient(to right, #ff0000, #000000); /* Gradient from red to black */
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-container {
+  flex: 1; /* Allow search container to grow */
+  display: flex;
+  justify-content: center; /* Center the search input and dropdown */
+}
+
+.search-input {
+  width: 300px; /* Adjust width as necessary */
+  border-radius: 0.25rem;
+}
+
+.category-dropdown {
+  width: 150px; /* Set a fixed width for category dropdown */
+  border-radius: 0.25rem;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #ffffff; /* Change icon color to white */
+}
+
+.btn-outline-light {
+  border-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff; /* Change background color on hover */
+  color: #000; /* Change text color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items on small screens */
+  }
+  .search-container {
+    width: 100%; /* Full width on mobile */
+  }
+}
+

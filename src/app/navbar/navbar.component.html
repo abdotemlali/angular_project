@@ -1,0 +1,62 @@
+<nav class="navbar navbar-dark bg-gradient-primary shadow-sm">
+  <div class="container-fluid">
+    <!-- Navbar Brand -->
+    <a class="navbar-brand" href="#">Market Tanjawi</a>
+
+    <!-- Navigation Links -->
+    <ul class="navbar-nav d-flex flex-row me-auto">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item ms-3">
+        <a routerLink="/panier" class="nav-link">Orders</a>
+      </li>
+      <li class="nav-item ms-3">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Form with Search and Category Dropdown -->
+    <form class="d-flex align-items-center mx-auto">
+      <!-- Search Input -->
+      <div class="search-container position-relative me-2">
+        <input
+          type="text"
+          class="form-control search-input"
+          [(ngModel)]="searchKey"
+          (ngModelChange)="onSearchByKey()"
+          list="productSuggestions"
+          placeholder="Rechercher des produits"
+          aria-label="Search"
+          name="searchKey"
+        />
+        <i class="fa fa-magnifying-glass search-icon"></i>
+
+        <!-- Datalist for product suggestions -->
+        <datalist id="productSuggestions">
+          <option *ngFor="let product of filteredProducts" [value]="product.name"></option>
+        </datalist>
+      </div>
+
+      <!-- Category Dropdown -->
+      <select
+        class="form-select category-dropdown me-2"
+        [(ngModel)]="selectedCategory"
+        name="selectedCategory"
+      >
+        <option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </option>
+      </select>
+
+      <!-- Search Button -->
+      <button class="btn btn-outline-light" type="button" (click)="search()">Rechercher</button>
+    </form>
+
+    <!-- Sign In/Out Button -->
+    <div class="d-flex">
+      <button *ngIf="!loggedIn" class="btn btn-outline-light me-3" (click)="signIn()">Sign in</button>
+      <button *ngIf="loggedIn" class="btn btn-outline-light me-3" (click)="signOut()">Sign Out</button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,66 @@
+/* Container for Cart Section */
+.container {
+  background: linear-gradient(to right, #ff0000, #000000); /* Gradient background */
+  color: #ffffff; /* White text color */
+  padding: 20px; /* Padding around the container */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-bottom: 30px; /* Space below the container */
+}
+
+/* Table Styles */
+.table {
+  background-color: #ffffff; /* White background for the table */
+  color: #000000; /* Black text color for the table */
+  border-radius: 0.5rem; /* Rounded corners for the table */
+}
+
+.thead-dark {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for the table header */
+  color: #ffffff; /* White text color for the header */
+}
+
+/* Table Row Styles */
+tbody tr {
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 0, 0, 0.2); /* Light red background on hover */
+}
+
+/* Button Styles */
+.btn {
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for button hover */
+}
+
+.btn-secondary {
+  background-color: #555; /* Dark gray background for secondary buttons */
+  color: #ffffff; /* White text color */
+}
+
+.btn-secondary:hover {
+  background-color: #777; /* Lighter gray on hover */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Bootstrap danger color */
+  color: #ffffff; /* White text color */
+}
+
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #ffffff; /* White text color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Total Text Styles */
+.text-end h4 {
+  color: #ffffff; /* White text for total */
+}

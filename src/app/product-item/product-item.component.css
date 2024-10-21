@@ -1,0 +1,50 @@
+.product-card {
+  background-color: #ffffff; /* White background for the card */
+  border: none; /* No border */
+  border-radius: 0.25rem; /* Rounded corners */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow on hover */
+}
+
+.card-img-custom {
+  height: 200px; /* Fixed height for images */
+  object-fit: cover; /* Cover the space */
+  border-radius: 0.25rem 0.25rem 0 0; /* Rounded corners on top */
+}
+
+.card-title {
+  color: #333; /* Dark text for title */
+  font-weight: bold; /* Bold font */
+}
+
+.card-text {
+  color: #666; /* Medium gray for description */
+  font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+.stock-status {
+  font-weight: bold; /* Bold font for stock status */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #ff0000; /* Red color for primary buttons */
+  border-color: #ff0000; /* Match border with background */
+}
+
+.btn-primary:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+.btn-outline-primary {
+  color: #ff0000; /* Red text for outline button */
+  border-color: #ff0000; /* Match border color */
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(255, 0, 0, 0.1); /* Light red background on hover */
+}

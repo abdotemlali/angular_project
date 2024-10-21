@@ -1,0 +1,29 @@
+<div class="container my-4">
+  <!-- Section des commentaires -->
+  <div class="comments-section mt-4">
+    <h4>Commentaires</h4>
+    <ul class="list-group">
+      <li *ngFor="let commentaire of comments" class="list-group-item">
+        <strong>{{ commentaire.author }}</strong>
+        <em>{{ commentaire.date | date:'short' }}</em>
+        <p>{{ commentaire.content }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Ajouter un commentaire -->
+  <div class="add-comment mt-3">
+    <h5>Ajouter un commentaire</h5>
+    <form [formGroup]="commentForm" (ngSubmit)="addComment()">
+      <div class="mb-3">
+        <label for="author" class="form-label">Nom</label>
+        <input id="author" class="form-control" formControlName="author" />
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Commentaire</label>
+        <textarea id="content" class="form-control" formControlName="content"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+  </div>
+</div>

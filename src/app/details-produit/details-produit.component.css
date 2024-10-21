@@ -1,0 +1,79 @@
+/* Product Detail Container */
+.container {
+  background: linear-gradient(to right, #ff0000, #000000); /* Gradient background */
+  color: #ffffff; /* White text color */
+  padding: 20px; /* Padding around the container */
+  border-radius: 0.5rem; /* Rounded corners */
+  margin-bottom: 30px; /* Space below the container */
+}
+
+/* Product Title */
+.product-title {
+  font-size: 2rem; /* Larger font size for the title */
+  font-weight: bold; /* Bold title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+/* Product Description */
+.product-description {
+  font-size: 1.2rem; /* Size of the product description */
+  margin-bottom: 20px; /* Space below the description */
+}
+
+/* Product Price */
+.product-price {
+  font-size: 1.5rem; /* Larger font size for price */
+  font-weight: bold; /* Bold price */
+  margin-bottom: 20px; /* Space below the price */
+}
+
+/* Stock Status Styles */
+.product-stock {
+  font-size: 1rem; /* Normal font size for stock status */
+  margin-bottom: 20px; /* Space below the stock status */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: #ffffff; /* White text color */
+  border-radius: 0.25rem; /* Rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Images */
+.img-fluid {
+  border-radius: 0.5rem; /* Rounded corners for product image */
+}
+
+.img-thumbnail {
+  border: 2px solid #ff0000; /* Red border for thumbnails */
+  border-radius: 0.5rem; /* Rounded corners for thumbnails */
+}
+
+/* Additional Images Section */
+.row {
+  margin-top: 20px; /* Space above additional images */
+}
+
+/* Flexbox styles for alignment */
+.d-flex {
+  display: flex;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.5rem; /* Smaller title on smaller screens */
+  }
+  .product-price {
+    font-size: 1.2rem; /* Smaller price on smaller screens */
+  }
+  .product-description {
+    font-size: 1rem; /* Smaller description on smaller screens */
+  }
+}

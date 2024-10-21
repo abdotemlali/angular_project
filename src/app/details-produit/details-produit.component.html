@@ -1,0 +1,31 @@
+<div *ngIf="product" class="container my-4">
+  <h2 class="product-title">{{ product.title }}</h2>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <img [src]="product.images[0]" class="img-fluid" alt="{{ product.title }}" />
+    </div>
+    <div class="col-md-6 d-flex flex-column justify-content-between">
+      <p class="product-description">{{ product.description }}</p>
+      <h4 class="product-price">{{ product.price }} $</h4>
+      <div class="product-stock" [ngClass]="{ 'text-success': product.stock > 0, 'text-danger': product.stock === 0 }">
+        <span *ngIf="product.stock > 0">{{ product.stock }} in stock</span>
+        <span *ngIf="product.stock === 0">Out of stock</span>
+      </div>
+      <button class="btn btn-primary" [disabled]="product.stock === 0" (click)="addToPanier()">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="product.images.length > 1">
+    <div class="col-md-12">
+      <h5>More Images</h5>
+      <div class="d-flex">
+        <img *ngFor="let img of product.images.slice(1)" [src]="img" class="img-thumbnail me-2" style="width: 100px; height: 100px;" alt="{{ product.title }}" />
+      </div>
+    </div>
+  </div>
+
+  <app-comments [productId]="product.id"></app-comments>
+</div>

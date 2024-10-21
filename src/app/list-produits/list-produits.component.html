@@ -1,0 +1,11 @@
+<div class="container text-center mt-5 py-5">
+  <h3>Découvrez notre sélection exceptionnelle de produits de qualité pour tous vos besoins.</h3>
+  <hr class="mx-auto">
+</div>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  @for (item of produits; track $index) {
+    <div class="col">
+      <app-product-item [product]="item"></app-product-item>
+    </div>
+  }
+</div>
